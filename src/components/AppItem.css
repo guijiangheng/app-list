@@ -1,0 +1,36 @@
+.appitem {
+  display: flex;
+  height: 120px;
+  align-items: stretch;
+  border-bottom: 1px solid #ccc;
+}
+
+.appitem__index {
+  font-size: 20px;
+  color: #ccc;
+  line-height: 120px;
+  flex: 40px 0 0;
+}
+
+.appitem__icon {
+  flex: 100px 0 0;
+  padding-top: 10px;
+}
+
+.appitem__info {
+  padding: 10px;
+}
+
+.appitem__title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.appitem__category {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.appitem:nth-child(even) .appitem__img {
+  border-radius: 50%;
+}
