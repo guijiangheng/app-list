@@ -45,7 +45,11 @@
 .applist--vertical .appitem {
   display: flex;
   flex-direction: column;
-  height: 240px;
+  height: 210px;
   min-width: 200px;
   border-bottom: none;
+}
+
+.applist--vertical .appitem__title {
+  font-size: 14px;
 }
