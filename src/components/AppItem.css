@@ -34,3 +34,18 @@
 .appitem:nth-child(even) .appitem__img {
   border-radius: 50%;
 }
+
+/* vertical */
+.applist--vertical {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.applist--vertical .appitem {
+  display: flex;
+  flex-direction: column;
+  height: 240px;
+  min-width: 200px;
+  border-bottom: none;
+}

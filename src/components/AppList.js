@@ -2,7 +2,7 @@ import React from 'react';
 import AppItem from './AppItem';
 import './AppList.css';
 
-function getAppInfo(item) {
+export function getAppInfo(item) {
   return {
     title: item['im:name'].label,
     icon: item['im:image'][2].label,
@@ -10,11 +10,12 @@ function getAppInfo(item) {
   };
 }
 
-export default function AppList({ items }) {
+export default function AppList({ items, vertical }) {
   return (
-    <div className="applist">
+    <div className={vertical ? 'applist--vertical' : 'applist'}>
       {items.map((item, index) =>
         <AppItem
+          vertical
           key={index}
           index={index + 1}
           {...getAppInfo(item)}

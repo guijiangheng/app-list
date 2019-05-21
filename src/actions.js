@@ -34,3 +34,26 @@ export function fetchTopFreeApps() {
       .then(json => dispatch(receiveTopFreeApps(json)));
   }
 }
+
+export function requestTopGrossingApps() {
+  return {
+    type: ActionType.REQUEST_TOP_GROSSING_APPS
+  };
+}
+
+
+export function receiveTopGrossingApps(json) {
+  return {
+    type: ActionType.RECEIVE_TOP_GROSSING_APPS,
+    json
+  };
+}
+
+export function fetchtopGrossingApps() {
+  return dispatch => {
+    dispatch(requestTopGrossingApps());
+    return fetch('https://itunes.apple.com/hk/rss/topgrossingapplications/limit=10/json')
+      .then(res => res.json())
+      .then(json => dispatch(receiveTopGrossingApps(json)));
+  }
+}

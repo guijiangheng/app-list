@@ -33,4 +33,31 @@ function topFreeApps(
   }
 }
 
-export default combineReducers({ filter, topFreeApps });
+function topGrossingApps(
+  state = {
+    loading: false,
+    items: []
+  },
+  action
+) {
+  switch (action.type) {
+    case ActionType.REQUEST_TOP_GROSSING_APPS:
+      return {
+        loading: false,
+        ...state
+      };
+    case ActionType.RECEIVE_TOP_GROSSING_APPS:
+      return {
+        loading: false,
+        items: action.json.feed.entry
+      };
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({
+  filter,
+  topFreeApps,
+  topGrossingApps
+});
