@@ -35,14 +35,14 @@
   border-radius: 50%;
 }
 
-/* vertical */
-.applist--vertical {
+/* horizontal */
+.applist--horizontal {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
 }
 
-.applist--vertical .appitem {
+.applist--horizontal .appitem {
   display: flex;
   flex-direction: column;
   height: 210px;
@@ -50,6 +50,6 @@
   border-bottom: none;
 }
 
-.applist--vertical .appitem__title {
+.applist--horizontal .appitem__title {
   font-size: 14px;
 }

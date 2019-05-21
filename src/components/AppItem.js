@@ -1,10 +1,10 @@
 import React from 'react';
 import './AppItem.css';
 
-export default function AppItem({ vertical, index, title, category, icon }) {
+export default function AppItem({ horizontal, index, title, category, icon }) {
   return (
     <div className="appitem">
-      {vertical ? null : <div className="appitem__index">{index}</div>}
+      {horizontal ? null : <div className="appitem__index">{index}</div>}
       <div className="appitem__icon">
         <img
           className="appitem__img"

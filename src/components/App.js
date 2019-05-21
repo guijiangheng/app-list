@@ -28,7 +28,7 @@ class App extends Component {
             placeholder="搜索"
           />
         </div>
-        <AppList {...topGrossingApps} vertical/>
+        <AppList {...topGrossingApps} horizontal/>
         <AppList {...topFreeApps} />
       </div>
     );

@@ -29,7 +29,7 @@ export function receiveTopFreeApps(json) {
 export function fetchTopFreeApps() {
   return dispatch => {
     dispatch(requestTopFreeApps());
-    return fetch('http://itunes.apple.com/hk/rss/topfreeapplications/limit=100/json')
+    return fetch('https://itunes.apple.com/hk/rss/topfreeapplications/limit=100/json')
       .then(res => res.json())
       .then(json => dispatch(receiveTopFreeApps(json)));
   }

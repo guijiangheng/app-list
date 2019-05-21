@@ -10,12 +10,12 @@ export function getAppInfo(item) {
   };
 }
 
-export default function AppList({ items, vertical }) {
+export default function AppList({ items, horizontal }) {
   return (
-    <div className={vertical ? 'applist--vertical' : 'applist'}>
+    <div className={horizontal ? 'applist--horizontal' : 'applist'}>
       {items.map((item, index) =>
         <AppItem
-          vertical={vertical}
+          horizontal={horizontal}
           key={index}
           index={index + 1}
           {...getAppInfo(item)}
